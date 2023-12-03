@@ -22,9 +22,9 @@ The project structure of the app is pretty straightword. There is a `HTTP_STATUS
 
 Unauthentic user can only access `/signup` and `/login` endpoints. JWT Authentication is implemented by default. All other endpoints are only available for authenticated users.
 
-POST `/signup` 
+**POST** `/signup` 
 
-POST `/login`
+**POST** `/login`
 
 (**Note**: Only authenticated users with token provided in headers are allowed. eg, Bearer {token})
 **GET** `/hotels`           _Fetch a list of all hotels
@@ -34,7 +34,7 @@ _
 
 **POST** `/hotels`          _Create a hotel_
 
-**UPDATE** `/hotels/:id`    _Update a hotel_
+**PUT** `/hotels/:id`    _Update a hotel_
 
 **DELETE** `/hotels/:id`    _Delete a hotel_
 
@@ -46,7 +46,7 @@ _
 
 **POST** `/rooms`           _Create a room_
 
-**UPDATE** `/rooms/:id`     _Update a room_
+**PUT** `/rooms/:id`     _Update a room_
 
 **DELETE** `/rooms/:id`     _Delete a room_
 
