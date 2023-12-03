@@ -9,15 +9,12 @@ the command `npm run migrate`.
 After setting up the database and adding the values for variables inside `.env` file, run the command `npm start` and the app will be served on port `8080`(by default).
 
 ## Project Structure
-
-Hotels-management-api
-                    └───src
-                        ├───controllers             # Route Controllers
-                        ├───database                # Database configuration
-                        ├───middlewares             # Middleware functions
-                        ├───migrations              # Migrations to prefil some data
-                        ├───models                  # Sequelize Models
-                        └───services                # Business logic functions
+            ├───controllers
+            ├───database
+            ├───middlewares
+            ├───migrations
+            ├───models
+            └───services
 
 The project structure of the app is pretty straightword. There is a `HTTP_STATUSES.json` file inside controllers folder that ensures only valid HTTP responses are returned from controllers.
 
@@ -26,20 +23,32 @@ The project structure of the app is pretty straightword. There is a `HTTP_STATUS
 Unauthentic user can only access `/signup` and `/login` endpoints. JWT Authentication is implemented by default. All other endpoints are only available for authenticated users.
 
 POST `/signup` 
+
 POST `/login`
 
-(Note: Only authenticated users with token provided in headers are allowed. eg, Bearer {token})
-GET `/hotels`           # Fetch a list of all hotels
-GET `hotels/:id`        # Fetch a hotel by id
-POST `/hotels`          # Create a hotel
-UPDATE `/hotels/:id`    # Update a hotel
-DELETE `/hotels/:id`    # Delete a hotel
-GET `/rooms`            # Fetch a list of all rooms
-GET `/rooms/:hotelId`   # Fetch a list of all rooms of a hotel
-GET `rooms/:id`         # Fetch a room by id
-POST `/rooms`           # Create a room
-UPDATE `/rooms/:id`     # Update a room
-DELETE `/rooms/:id`     # Delete a room
+(**Note**: Only authenticated users with token provided in headers are allowed. eg, Bearer {token})
+**GET** `/hotels`           _Fetch a list of all hotels
+_
+
+**GET** `hotels/:id`        _Fetch a hotel by id_
+
+**POST** `/hotels`          _Create a hotel_
+
+**UPDATE** `/hotels/:id`    _Update a hotel_
+
+**DELETE** `/hotels/:id`    _Delete a hotel_
+
+**GET** `/rooms`            _Fetch a list of all rooms_
+
+**GET** `/rooms/:hotelId`   _Fetch a list of all rooms of a hotel_
+
+**GET** `rooms/:id`         _Fetch a room by id_
+
+**POST** `/rooms`           _Create a room_
+
+**UPDATE** `/rooms/:id`     _Update a room_
+
+**DELETE** `/rooms/:id`     _Delete a room_
 
 ## Going forward
 
