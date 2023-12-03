@@ -41,3 +41,6 @@ POST `/rooms`           # Create a room
 UPDATE `/rooms/:id`     # Update a room
 DELETE `/rooms/:id`     # Delete a room
 
+## Going forward
+
+This project was implemented according to the requirements of a test assessment to showcase the abilities of the developer and lacks some improvements for the sack of brevity. In no case it will be completely functional for a real-life application.
